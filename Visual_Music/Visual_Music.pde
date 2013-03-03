@@ -168,6 +168,30 @@ brushStrokes.add(new BrushStroke(179, 53, color(249, 68, 0), color(249, 68, 0), 
  brushStrokes.add(new BrushStroke(182, 59, color(249, 68, 0), color(249, 68, 0), 3, 10, 3));
  brushStrokes.add(new BrushStroke(183, 61, color(249, 68, 0), color(255, 215, 21), 3, 10, 3));
  brushStrokes.add(new BrushStroke(184, 63, color(249, 68, 0), color(249, 68, 0), 3, 10, 3));
+ 
+ //yellow number 1 square at 172, 76
+brushStrokes.add(new BrushStroke(172, 76, color(235, 16, 21), color(235, 16, 21), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(174, 77, color(235, 16, 21), color(235, 16, 21), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(176, 78, color(235, 16, 21), color(235, 16, 21), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(178, 79, color(235, 16, 21), color(235, 16, 21), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(180, 80, color(235, 16, 21), color(235, 16, 21), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(182, 81, color(235, 16, 21), color(235, 16, 21), 1, 10, 3));
+
+//blue stroke middle top right 
+ brushStrokes.add(new BrushStroke(353, 52, color(1, 173, 173), color(1, 173, 173), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(355, 53, color(1, 173, 173), color(1, 173, 173), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(357, 54, color(1, 125, 126), color(1, 125, 126), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(359, 55, color(1, 125, 126), color(1, 125, 126), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(361, 56, color(1, 173, 173), color(1, 173, 173), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(363, 57, color(1, 173, 173), color(1, 173, 173), 1, 10, 3));
+
+//red and black brush stroke number 2 above it 
+ brushStrokes.add(new BrushStroke(358, 40, color(188, 15, 0), color(0), 2, 10, 3));
+ brushStrokes.add(new BrushStroke(360, 41, color(188, 15, 0), color(0), 2, 10, 3));
+ brushStrokes.add(new BrushStroke(362, 42, color(188, 15, 0), color(0), 2, 10, 3));
+ brushStrokes.add(new BrushStroke(364, 43, color(188, 15, 0), color(0), 2, 10, 3));
+ brushStrokes.add(new BrushStroke(366, 44, color(188, 15, 0), color(0), 2, 10, 3));
+ brushStrokes.add(new BrushStroke(368, 45, color(188, 15, 0), color(0), 2, 10, 3));
 
 
 

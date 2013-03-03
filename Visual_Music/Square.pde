@@ -54,7 +54,7 @@ public class Renderer {
     {
         color c1 = brushStroke.color1; 
         color c2 = brushStroke.color2;
-        degree += 0.01; 
+        degree += 0.05; 
         if(degree <= 1.0 && degree >= 0.0) {
           color c3 = lerpColor(c1, c2, degree); 
           stroke(c3);
