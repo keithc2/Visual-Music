@@ -1,12 +1,12 @@
 import ddf.minim.*;
-
 Minim minim;
-AudioPlayer a1;
+AudioPlayer a1; 
 
-int startTime = millis();
+Renderer test;
+
+ArrayList<BrushStroke> brushStrokes = new ArrayList<BrushStroke>(); 
 int i = 0; 
-float startX = 85; 
-float startY = 20;
+boolean finished = true;
 
 void setup() {
   size(479,665);
@@ -14,196 +14,146 @@ void setup() {
   smooth();
   minim = new Minim(this);
   a1 = minim.loadFile("The Cinematic Orchestra - Transformation.mp3"); 
+  populateBrushStroke();
+  test = new Renderer(brushStrokes.get(0));
+    
 }
+ 
+
+void draw() {
+  //a1.play(); 
+  if(finished)
+  { 
+      finished = false;
+      test.setBrushStroke(brushStrokes.get(i));
+      if(i + 1 != brushStrokes.size())
+      {
+        i++;
+      }
+  }   
+        
+   finished = test.render();  
+   
+}
+     
+
+ 
+
+void populateBrushStroke() {
+  //blue top leftmost
+  //blue stroke on top left
+  brushStrokes.add(new BrushStroke(11, 3, color(0,78,184), color(0,78,184), 1, 10, 3));
+  brushStrokes.add(new BrushStroke(12, 4, color(0,78,184), color(0,78,184), 1, 10, 3));
+  brushStrokes.add(new BrushStroke(14, 5, color(0,78,184), color(0,78,184), 1, 10, 3));
+  brushStrokes.add(new BrushStroke(16, 6, color(0,78,184), color(0,78,184), 1, 10, 3));
+  brushStrokes.add(new BrushStroke(18, 7, color(0,78,184), color(0,78,184), 1, 10, 3));
+    
+  //teal stroke to right of that 
+  brushStrokes.add(new BrushStroke(28, 4, color(5,52,76), color(5,52,76), 2, 10, 4));
+  brushStrokes.add(new BrushStroke(30, 6, color(137, 216, 190), color(137,216, 190), 2, 10, 3));
+  brushStrokes.add(new BrushStroke(33, 7, color(52, 126, 153), color(52, 126, 153), 2, 10, 3));
+    
+ //blue beneath purple
+ brushStrokes.add(new BrushStroke(53, 8, color(35, 45, 101), color(35, 45, 101), 2, 10, 4));
+ brushStrokes.add(new BrushStroke(55, 9, color(35, 45, 101), color(35, 45, 101), 2, 10, 4));
+ brushStrokes.add(new BrushStroke(57, 10, color(35, 45, 101), color(35, 45, 101), 2, 10, 4));
+ brushStrokes.add(new BrushStroke(59, 11, color(35, 45, 101), color(35, 45, 101), 2, 10, 4));
+ brushStrokes.add(new BrushStroke(54, 9, color(255, 50), color(255, 50), 2, 10, 1));
+ brushStrokes.add(new BrushStroke(57, 11, color(255, 50), color(255, 50), 2, 10, 1));   
+    
+ //purple strokes to right of that 
+ brushStrokes.add(new BrushStroke(40, 8, color(33, 27, 77), color(33, 27, 77), 1, 10, 2));
+ brushStrokes.add(new BrushStroke(42, 9, color(33, 27, 77), color(33, 27, 77), 1, 10, 2));
+ brushStrokes.add(new BrushStroke(44, 10, color(94, 100, 174), color(94, 100, 174), 1, 10, 2));
+ brushStrokes.add(new BrushStroke(46, 11, color(94, 100, 174), color(94, 100, 174), 1, 10, 2));
+ brushStrokes.add(new BrushStroke(48, 12, color(121, 124, 188), color(121, 124, 188), 1, 10, 2));
+ brushStrokes.add(new BrushStroke(50, 13, color(121, 124, 188), color(121, 124, 188), 1, 10, 2));
+ 
+ //teal strokes to right of purple
+ brushStrokes.add(new BrushStroke(89, 0, color(90, 140, 120), color(90, 140, 120), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(91, 1, color(90, 140, 120), color(90, 140, 120), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(93, 2, color(90, 140, 120), color(90, 140, 120), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(95, 3, color(81, 125, 108), color(81, 125, 108), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(97, 4, color(89, 140, 121), color(89, 140, 121), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(99, 5, color(113, 164, 145), color(113, 164, 145), 1, 10, 3));
+ 
+ //more purpule strokes below 
+brushStrokes.add(new BrushStroke(84, 16, color(104, 92, 196), color(104, 92, 196), 2, 10, 3));
+ brushStrokes.add(new BrushStroke(86, 17, color(104,92, 196), color(104, 92, 196), 2, 10, 3));
+ brushStrokes.add(new BrushStroke(88, 18, color(157, 149, 217), color(157, 149, 217), 2, 10, 3));
+ brushStrokes.add(new BrushStroke(90, 19, color(157, 149, 217), color(157, 149, 217), 2, 10, 3));
+
+ 
+//purple strokes
+ brushStrokes.add(new BrushStroke(81, 17, color(104, 92, 196), color(104, 92, 196), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(83, 31, color(104,92, 196), color(104, 92, 196), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(85, 33, color(157, 149, 217), color(157, 149, 217), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(87, 35, color(157, 149, 217), color(157, 149, 217), 1, 10, 3));
+
+ //teal strokes leftmost
+ brushStrokes.add(new BrushStroke(3, 40, color(90, 140, 120), color(90, 140, 120), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(5, 41, color(90, 140, 120), color(90, 140, 120), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(7, 42, color(90, 140, 120), color(90, 140, 120), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(9, 43, color(81, 125, 108), color(81, 125, 108), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(11,44 , color(89, 140, 121), color(89, 140, 121), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(13, 45, color(113, 164, 145), color(113, 164, 145), 1, 10, 3));
+ 
+ //blue strokes on top of that 
+ brushStrokes.add(new BrushStroke(13, 29, color(5, 103, 211), color(5, 103, 211), 2, 10, 3));
+ brushStrokes.add(new BrushStroke(15, 30, color(5, 103, 211), color(5, 103, 211), 2, 10, 3));
+ brushStrokes.add(new BrushStroke(17, 31, color(5, 103, 211), color(5, 103, 211), 2, 10, 3));
+ brushStrokes.add(new BrushStroke(19, 32, color(5, 103, 211), color(5, 103, 211), 2, 10, 3));
+ brushStrokes.add(new BrushStroke(21, 33 , color(5, 103, 211), color(5, 103, 211), 2, 10, 3));
+ 
+ //teal strokes with 2 
+brushStrokes.add(new BrushStroke(30, 67, color(90, 140, 120), color(90, 140, 120), 2, 10, 3));
+brushStrokes.add(new BrushStroke(32, 68, color(90, 140, 120), color(90, 140, 120), 2, 10, 3));
+brushStrokes.add(new BrushStroke(34, 69, color(90, 140, 120), color(90, 140, 120), 2, 10, 3));
+brushStrokes.add(new BrushStroke(36, 70, color(81, 125, 108), color(81, 125, 108), 2, 10, 3));
+brushStrokes.add(new BrushStroke(38, 71, color(89, 140, 121), color(89, 140, 121), 2, 10, 3));
+brushStrokes.add(new BrushStroke(40, 72, color(113, 164, 145), color(113, 164, 145), 2, 10, 3));
+
+//purple strokes with 3
+brushStrokes.add(new BrushStroke(60, 45, color(33, 27, 77), color(33, 27, 77), 3, 10, 3));
+ brushStrokes.add(new BrushStroke(61, 47, color(33, 27, 77), color(33, 27, 77), 3, 10, 3));
+ brushStrokes.add(new BrushStroke(62, 49, color(94, 100, 174), color(94, 100, 174), 3, 10, 3));
+ brushStrokes.add(new BrushStroke(63, 51, color(94, 100, 174), color(94, 100, 174), 3, 10, 3));
+ brushStrokes.add(new BrushStroke(64, 53, color(121, 124, 188), color(121, 124, 188), 3, 10, 3));
+ brushStrokes.add(new BrushStroke(65, 55, color(121, 124, 188), color(121, 124, 188), 3, 10, 3));
+
+//purple strokes with 1 
+brushStrokes.add(new BrushStroke(39, 58, color(33, 27, 77), color(33, 27, 77), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(41, 59, color(33, 27, 77), color(33, 27, 77), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(43, 60, color(94, 100, 174), color(94, 100, 174), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(45, 61, color(94, 100, 174), color(94, 100, 174), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(47, 62, color(121, 124, 188), color(121, 124, 188), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(49, 63, color(121, 124, 188), color(121, 124, 188), 1, 10, 3));
+
+//black strokes with 1
+brushStrokes.add(new BrushStroke(31, 25, color(0), color(0), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(33, 26, color(0), color(0), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(35, 27, color(0), color(0), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(37, 28, color(0), color(0), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(39, 29, color(0), color(0), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(41, 30, color(0), color(0), 1, 10, 3));
+
+//black strokes with 1 
+brushStrokes.add(new BrushStroke(39, 49, color(90, 140, 120), color(90, 140, 120), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(41, 50, color(90, 140, 120), color(90, 140, 120), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(43, 51, color(90, 140, 120), color(90, 140, 120), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(45, 52, color(81, 125, 108), color(81, 125, 108), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(47, 53, color(89, 140, 121), color(89, 140, 121), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(49, 54, color(113, 164, 145), color(113, 164, 145), 1, 10, 3));
+
+
+
+
+} 
 
 void stop() {
    a1.close(); 
    minim.stop() ;
    super.stop() ;
 }
- 
-
-void draw(){
-   //pink square at 310, 192
-   BrushStroke s1 = new BrushStroke("pink", 310, 192); 
-   s1.render(); 
-   
-   //simple blue square at 122, 286
-   s1.setRGB(22, 110, 170); 
-   s1.setSquareColor("simple blue"); 
-   s1.setStartX(122); 
-   s1.setStartY(286); 
-   s1.render(); 
-   
-   //simple blue square at 354, 53
-   s1.setRGB(2, 102, 125); 
-   s1.setSquareColor("simple blue"); 
-   s1.setStartX(353); 
-   s1.setStartY(54); 
-   s1.render();
-   
-   //simple blue square at 387, 51
-   s1.setRGB(16, 6, 76); 
-   s1.setSquareColor("simple blue"); 
-   s1.setStartX(387); 
-   s1.setStartY(51); 
-   s1.render();
-
-   
-  
-   
-   //pink square at 338, 159
-   s1.setSquareColor("pink"); 
-   s1.setStartX(338); 
-   s1.setStartY(159); 
-   s1.render(); 
-   
-   //pink square at 77, 212
-   s1.setSquareColor("pink"); 
-   s1.setStartX(77); 
-   s1.setStartY(212); 
-   s1.render(); 
-   
-   //pink square at 40, 232
-   s1.setSquareColor("pink"); 
-   s1.setStartX(40); 
-   s1.setStartY(159); 
-   s1.render(); 
-   
-   //pink square at 175, 192
-   s1.setSquareColor("pink"); 
-   s1.setStartX(175); 
-   s1.setStartY(192); 
-   s1.render();
-  
-   //pink square at 203, 181
-   s1.setSquareColor("pink"); 
-   s1.setStartX(203); 
-   s1.setStartY(181); 
-   s1.render(); 
-   
-   //pink square at 187, 160
-   s1.setSquareColor("pink"); 
-   s1.setStartX(187); 
-   s1.setStartY(160); 
-   s1.render(); 
-   
-   //pink square at 154, 221
-   s1.setSquareColor("pink"); 
-   s1.setStartX(154); 
-   s1.setStartY(221); 
-   s1.render();
-   
-   //pink square at 188, 229
-   s1.setSquareColor("pink"); 
-   s1.setStartX(188); 
-   s1.setStartY(229); 
-   s1.render();
-   
-   //pink square at 202, 265
-   s1.setSquareColor("pink"); 
-   s1.setStartX(202); 
-   s1.setStartY(265); 
-   s1.render();  
-   
-   //pink square at 137, 285
-   s1.setSquareColor("pink"); 
-   s1.setStartX(137); 
-   s1.setStartY(285); 
-   s1.render(); 
-   
-   //pink square at 163, 310
-   s1.setSquareColor("pink"); 
-   s1.setStartX(163); 
-   s1.setStartY(310); 
-   s1.render(); 
-   
-   //pink square at 195, 307
-   s1.setSquareColor("pink"); 
-   s1.setStartX(195); 
-   s1.setStartY(307); 
-   s1.render(); 
-   
-   //pink square at 98, 339
-   s1.setSquareColor("pink"); 
-   s1.setStartX(98); 
-   s1.setStartY(339); 
-   s1.render(); 
- 
-   //pink square at 161, 373
-   s1.setSquareColor("pink"); 
-   s1.setStartX(161); 
-   s1.setStartY(373); 
-   s1.render(); 
-  
-   //pink square at 160, 407
-   s1.setSquareColor("pink"); 
-   s1.setStartX(160); 
-   s1.setStartY(407); 
-   s1.render(); 
-   
-   //pink square at 17, 440
-   s1.setSquareColor("pink"); 
-   s1.setStartX(17); 
-   s1.setStartY(440); 
-   s1.render(); 
-   
-   //pink square at 377, 109
-   s1.setSquareColor("pink"); 
-   s1.setStartX(377); 
-   s1.setStartY(105); 
-   s1.render(); 
-   
-   //pink square at 279, 196
-   s1.setSquareColor("pink"); 
-   s1.setStartX(279); 
-   s1.setStartY(196); 
-   s1.render(); 
-  
-   //pink square at 275, 248
-   s1.setSquareColor("pink"); 
-   s1.setStartX(275); 
-   s1.setStartY(248); 
-   s1.render(); 
-   
-   
-   
-   
-   
-   /*
-   ANIMATION CODE 
-   
-   a1.play();
-   noFill();
-   fill(255);
-   int steps = 1000;
- 
-   float framesToAnimate = 5;
- 
-   float t = i / float(steps);
-   float endX = bezierPoint(85, 10, 90, 15, t);
-   float endY = bezierPoint(20, 10, 90, 80, t);
-   float lineLengthX = endX - startX;
-   float lineLengthY = endY - startY;
-   if(millis() > startTime && i <= steps)
-   {
-       line(startX, startY, startX+ (float)(frameCount % framesToAnimate)/framesToAnimate*lineLengthX, startY + (float)(frameCount % framesToAnimate)/framesToAnimate*lineLengthY );
-       startTime += 5; 
-       i++;     
-       startX = endX; 
-       startY = endY; 
-    }
-    float x = 50;
-    float y = 50;
-    float lineLength = 400;
-    line(x, y, x + (float)(frameCount % framesToAnimate)/framesToAnimate*lineLength, y);
-     
-    float x = 50;
-    float y = 50;                              //set the multiplier to adjust speed
-    line(x,y,x+(millis()-initialTime)*0.01, y+(millis()-initialTime)*0.01);           //10 px/sec
-    line(x,y+50,x+(millis()-initialTime)*0.05, y+50+(millis()-initialTime)*0.01);     //50 px/sec
-    line(x,y+100,x+(millis()-initialTime)*0.001, y+100+(millis()-initialTime)*0.01);  // 1 px/sec
-    */
-}   
 
 

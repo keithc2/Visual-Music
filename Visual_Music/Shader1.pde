@@ -1,30 +1,21 @@
-public class Shader {
+public class BrushStroke {
   int startX; 
   int startY; 
-  int shader; 
+  color color1; 
+  color color2; 
+  int bezierType; 
+  int steps; 
+  int weight; 
   
-  public Shader(int x, int y, int s) {
+  public BrushStroke(int x, int y, int c1, int c2, int b, int s, int w) {
     startX = x; 
     startY = y; 
-    shader = s; 
+    color1 = c1; 
+    color2 = c2; 
+    bezierType = b; 
+    steps = s; 
+    weight = w;
   } 
   
-  public void render() {
-    if(shader == 1) 
-    { 
-      stroke(255, 50);
-      bezier(startX, startY, startX - 5, startY + 15, startX - 5, startY + 20, startX - 10, startY + 20); 
-      startX += 9; 
-      startY += 6;
-      stroke(255, 85);
-      bezier(startX, startY, startX - 5, startY + 15, startX - 5, startY + 20, startX - 10, startY + 20); 
-      startX += 3; 
-      startY += 1;
-      stroke(255, 85 );
-      bezier(startX, startY, startX - 5, startY + 15, startX - 5, startY + 20, startX - 10, startY + 20); 
-      
-    }    
-
-  } 
-    
+  
 } 
