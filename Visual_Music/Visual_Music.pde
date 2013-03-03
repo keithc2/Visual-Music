@@ -138,12 +138,36 @@ brushStrokes.add(new BrushStroke(31, 25, color(0), color(0), 1, 10, 3));
  brushStrokes.add(new BrushStroke(41, 30, color(0), color(0), 1, 10, 3));
 
 //black strokes with 1 
-brushStrokes.add(new BrushStroke(39, 49, color(90, 140, 120), color(90, 140, 120), 1, 10, 3));
- brushStrokes.add(new BrushStroke(41, 50, color(90, 140, 120), color(90, 140, 120), 1, 10, 3));
- brushStrokes.add(new BrushStroke(43, 51, color(90, 140, 120), color(90, 140, 120), 1, 10, 3));
- brushStrokes.add(new BrushStroke(45, 52, color(81, 125, 108), color(81, 125, 108), 1, 10, 3));
- brushStrokes.add(new BrushStroke(47, 53, color(89, 140, 121), color(89, 140, 121), 1, 10, 3));
- brushStrokes.add(new BrushStroke(49, 54, color(113, 164, 145), color(113, 164, 145), 1, 10, 3));
+brushStrokes.add(new BrushStroke(39, 49, color(0), color(0), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(41, 50, color(0), color(0), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(43, 51, color(0), color(0), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(45, 52, color(0), color(0), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(47, 53, color(0), color(0), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(49, 54, color(0), color(0), 1, 10, 3));
+ 
+ // orange square middle left 
+brushStrokes.add(new BrushStroke(84, 138, color(241, 148, 18), color(241, 148, 18), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(86, 139, color(241, 148, 18), color(241, 148, 18), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(88, 140, color(241, 148, 18), color(241, 148, 18), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(90, 141, color(241, 148, 18), color(241, 148, 18), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(92, 142, color(241, 148, 18), color(241, 148, 18), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(94, 143, color(241, 148, 18), color(241, 148, 18), 1, 10, 3));
+
+//brighter orange square to right of that 
+brushStrokes.add(new BrushStroke(166, 159, color(255, 215, 21), color(255, 215, 21), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(168, 160, color(255, 215, 21), color(255, 215, 21), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(170, 161, color(255, 215, 21), color(255, 215, 21), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(172, 162, color(255, 215, 21), color(255, 215, 21), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(174, 163, color(255, 215, 21), color(255, 215, 21), 1, 10, 3));
+ brushStrokes.add(new BrushStroke(176, 164, color(255, 215, 21), color(255, 215, 21), 1, 10, 3));
+
+//red number three square
+brushStrokes.add(new BrushStroke(179, 53, color(249, 68, 0), color(249, 68, 0), 3, 10, 3));
+ brushStrokes.add(new BrushStroke(180, 55, color(249, 68, 0), color(249, 68, 0), 3, 10, 3));
+ brushStrokes.add(new BrushStroke(181, 57, color(249, 68, 0), color(249, 68, 0), 3, 10, 3));
+ brushStrokes.add(new BrushStroke(182, 59, color(249, 68, 0), color(249, 68, 0), 3, 10, 3));
+ brushStrokes.add(new BrushStroke(183, 61, color(249, 68, 0), color(255, 215, 21), 3, 10, 3));
+ brushStrokes.add(new BrushStroke(184, 63, color(249, 68, 0), color(249, 68, 0), 3, 10, 3));
 
 
 
