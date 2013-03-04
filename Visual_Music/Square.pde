@@ -46,6 +46,76 @@ public class Renderer {
       endPointX = bezierPoint(startX, startX - 4 , startX - 7, startX - 10, t); 
       endPointY = bezierPoint(startY, startY + 1, startY + 2, startY + 4, t); 
     } 
+    else if (brushStroke.bezierType == 4) //Eiffel tower curve left 
+    { 
+      endPointX = bezierPoint(startX, startX + 5 , startX + 5, startX - 114, t); 
+      endPointY = bezierPoint(startY, startY + 150, startY + 300, startY + 490, t);
+    } 
+    else if (brushStroke.bezierType == 5) //Eiffel tower curve lefter
+    { 
+      endPointX = bezierPoint(startX, startX + 5 , startX + 5, startX - 134, t); 
+      endPointY = bezierPoint(startY, startY + 150, startY + 300, startY + 490, t);
+    } 
+    else if (brushStroke.bezierType == 6) //Eiffel tower curve middle left
+    { 
+      endPointX = bezierPoint(startX, startX + 5, startX + 5, startX - 124, t); 
+      endPointY = bezierPoint(startY, startY + 150, startY + 300, startY + 490, t);
+    } 
+    else if (brushStroke.bezierType == 7) //Eiffel tower curve right of right 
+    { 
+      endPointX = bezierPoint(startX, startX + 5, startX + 5, startX - 104, t); 
+      endPointY = bezierPoint(startY, startY + 150, startY + 300, startY + 490, t);
+    } 
+    else if (brushStroke.bezierType == 8) //Eiffel tower curve right 
+    { 
+      endPointX = bezierPoint(startX, startX - 5, startX - 5, startX + 114, t); 
+      endPointY = bezierPoint(startY, startY + 150, startY + 300, startY + 490, t);
+    } 
+    else if (brushStroke.bezierType == 9) //Eiffel tower curve righter
+    { 
+      endPointX = bezierPoint(startX, startX - 5, startX - 5, startX + 134, t); 
+      endPointY = bezierPoint(startY, startY + 150, startY + 300, startY + 490, t);
+    } 
+    else if (brushStroke.bezierType == 10) //Eiffel tower curve middle right
+    { 
+      endPointX = bezierPoint(startX, startX - 5, startX - 5, startX + 124, t); 
+      endPointY = bezierPoint(startY, startY + 150, startY + 300, startY + 490, t);
+    } 
+    else if (brushStroke.bezierType == 11) //Eiffel tower curve right of right 
+    { 
+      endPointX = bezierPoint(startX, startX - 5, startX - 5, startX + 104, t); 
+      endPointY = bezierPoint(startY, startY + 150, startY + 300, startY + 490, t);
+    } 
+    else if (brushStroke.bezierType == 12) //Eiffel tower curve bottom
+    { 
+      endPointX = bezierPoint(startX, startX + 50 , startX + 125, startX + 175, t); 
+      endPointY = bezierPoint(startY, startY - 75, startY - 75, startY, t);
+    } 
+    else if (brushStroke.bezierType == 13) //Eiffel tower lines top
+    { 
+      endPointX = bezierPoint(startX, startX + 23 , startX + 46, startX + 78, t); 
+      endPointY = bezierPoint(startY, startY, startY, startY, t);
+    } 
+    else if (brushStroke.bezierType == 14) //Eiffel tower line bottom 
+    { 
+      endPointX = bezierPoint(startX, startX + 50 , startX + 100, startX + 150, t); 
+      endPointY = bezierPoint(startY, startY, startY, startY, t);
+    } 
+    else if (brushStroke.bezierType == 9) //short line brush strokes  
+    { 
+      endPointX = bezierPoint(startX, startX - 4 , startX - 7, startX - 10, t); 
+      endPointY = bezierPoint(startY, startY + 1, startY + 2, startY + 4, t);
+    } 
+    else if (brushStroke.bezierType == 10) //lamp strokes 
+    { 
+      endPointX = bezierPoint(startX, startX - 4 , startX - 7, startX - 10, t); 
+      endPointY = bezierPoint(startY, startY + 1, startY + 2, startY + 4, t);
+    } 
+    else if (brushStroke.bezierType == 11) //vertical lines for lamp post  
+    { 
+      endPointX = bezierPoint(startX, startX - 4 , startX - 7, startX - 10, t); 
+      endPointY = bezierPoint(startY, startY + 1, startY + 2, startY + 4, t);
+    } 
     
     float lineLengthX = endPointX - startPointX;
     float lineLengthY = endPointY - startPointY;
