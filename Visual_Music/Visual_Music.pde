@@ -60,6 +60,7 @@ void setup() {
   a1 = minim.loadFile("The Cinematic Orchestra - Transformation.mp3"); 
   populateXAndY(); 
   populateColors();
+  
   populateBrushStroke1();
   populateBrushStroke2(); 
   populateBrushStroke3(); 
@@ -77,7 +78,8 @@ void setup() {
   populateBrushStroke16();
   populateBrushStroke17();
   populateBrushStroke18();
-  //populateBrushStroke19(); 
+  
+  populateBrushStroke19(); 
   
   
   test = new Renderer(brushStrokes.get(0));
@@ -92,19 +94,22 @@ void setup() {
   test10 = new Renderer(brushStrokes.get(54)); 
   test11 = new Renderer(brushStrokes.get(60));
   test12 = new Renderer(brushStrokes.get(66)); 
+  
     
 }
  
  
 
 void draw() {
-  //a1.play(); 
+  a1.play(); 
   if(finished)
   { 
       finished = false;
-      test.setBrushStroke(brushStrokes.get(count1));
+      
       if(count1 + 1 < brushStrokes.size())
       {
+        println("finished 1 " + count1); 
+        test.setBrushStroke(brushStrokes.get(count1));
         if((count1 + 1) % 6 == 0)
           count1 += 67; 
         else
@@ -116,10 +121,12 @@ void draw() {
    if(finished2)
    { 
       finished2 = false;
-      test2.setBrushStroke(brushStrokes.get(count2));
+      
       if(count2 + 1 < brushStrokes.size())
       {
-        if(count2 + 1 % 6 == 0)
+        
+        test2.setBrushStroke(brushStrokes.get(count2));
+        if((count2 + 1) % 6 == 0)
           count2 += 67;
         else
          count2++;
@@ -131,10 +138,11 @@ void draw() {
    if(finished3)
    { 
       finished3 = false;
-      test3.setBrushStroke(brushStrokes.get(count3));
+      
       if(count3 + 1 < brushStrokes.size())
       {
-        if(count3 + 1 % 6 == 0)
+        test3.setBrushStroke(brushStrokes.get(count3));
+        if((count3 + 1) % 6 == 0)
           count3 += 67;
         else
          count3++;
@@ -146,10 +154,11 @@ void draw() {
    if(finished4)
    { 
       finished4 = false;
-      test4.setBrushStroke(brushStrokes.get(count4));
+      
       if(count4 + 1 < brushStrokes.size())
       {
-        if(count4 + 1 % 6 == 0)
+        test4.setBrushStroke(brushStrokes.get(count4));
+        if((count4 + 1) % 6 == 0)
           count4 += 67;
         else
          count4++;
@@ -161,10 +170,11 @@ void draw() {
   if(finished5)
    { 
       finished5 = false;
-      test5.setBrushStroke(brushStrokes.get(count5));
+      
       if(count5 + 1 < brushStrokes.size())
       {
-        if(count5 + 1 % 6 == 0)
+        test5.setBrushStroke(brushStrokes.get(count5));
+        if((count5 + 1) % 6 == 0)
           count5 += 67;
         else
          count5++;
@@ -172,14 +182,15 @@ void draw() {
   }   
         
    finished5 = test5.render(); 
-  
+   
    if(finished6)
    { 
       finished6 = false;
-      test6.setBrushStroke(brushStrokes.get(count6));
+      
       if(count6 + 1 < brushStrokes.size())
       {
-        if(count6 + 1 % 6 == 0)
+        test6.setBrushStroke(brushStrokes.get(count6));
+        if((count6 + 1) % 6 == 0)
           count6 += 67;
         else
          count6++;
@@ -191,10 +202,11 @@ void draw() {
      if(finished7)
    { 
       finished7 = false;
-      test7.setBrushStroke(brushStrokes.get(count7));
+      
       if(count7 + 1 < brushStrokes.size())
       {
-        if(count7 + 1 % 6 == 0)
+        test7.setBrushStroke(brushStrokes.get(count7));
+        if((count7 + 1) % 6 == 0)
           count7 += 67;
         else
          count7++;
@@ -206,10 +218,11 @@ void draw() {
      if(finished8)
    { 
       finished8 = false;
-      test8.setBrushStroke(brushStrokes.get(count8));
+      
       if(count8 + 1 < brushStrokes.size())
       {
-        if(count8 + 1 % 6 == 0)
+        test8.setBrushStroke(brushStrokes.get(count8));
+        if((count8 + 1) % 6 == 0)
           count8 += 67;
         else
          count8++;
@@ -221,10 +234,11 @@ void draw() {
      if(finished9)
    { 
       finished9 = false;
-      test9.setBrushStroke(brushStrokes.get(count9));
+      
       if(count9 + 1 < brushStrokes.size())
       {
-        if(count9 + 1 % 6 == 0)
+        test9.setBrushStroke(brushStrokes.get(count9));
+        if((count9 + 1) % 6 == 0)
           count9 += 67;
         else
          count9++;
@@ -236,10 +250,11 @@ void draw() {
      if(finished10)
    { 
       finished10 = false;
-      test10.setBrushStroke(brushStrokes.get(count10));
+      
       if(count10 + 1 < brushStrokes.size())
       {
-        if(count10 + 1 % 10 == 0)
+        test10.setBrushStroke(brushStrokes.get(count10));
+        if((count10 + 1) % 10 == 0)
           count10 += 67;
         else
          count10++;
@@ -251,10 +266,11 @@ void draw() {
      if(finished11)
    { 
       finished11 = false;
-      test11.setBrushStroke(brushStrokes.get(count11));
+      
       if(count11 + 1 < brushStrokes.size())
       {
-        if(count11 + 1 % 6 == 0)
+        test11.setBrushStroke(brushStrokes.get(count11));
+        if((count11 + 1) % 6 == 0)
           count11 += 67;
         else
          count11++;
@@ -266,10 +282,12 @@ void draw() {
      if(finished12)
    { 
       finished12 = false;
-      test12.setBrushStroke(brushStrokes.get(count12));
+      
       if(count12 + 1 < brushStrokes.size())
       {
-        if(count12 + 1 % 6 == 0)
+        println("finished 12 " + count12 ); 
+        test12.setBrushStroke(brushStrokes.get(count12));
+        if((count12 + 1) % 6 == 0)
           count12 += 67;
         else
          count12++;
