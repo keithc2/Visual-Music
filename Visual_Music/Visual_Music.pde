@@ -3,6 +3,17 @@ Minim minim;
 AudioPlayer a1; 
 
 Renderer test;
+Renderer test2;
+Renderer test3; 
+Renderer test4; 
+Renderer test5; 
+Renderer test6; 
+Renderer test7;
+Renderer test8;
+Renderer test9; 
+Renderer test10; 
+Renderer test11; 
+Renderer test12; 
 
 color c;
 color c1; 
@@ -13,8 +24,30 @@ ArrayList<Integer> xCoor = new ArrayList<Integer>();
 ArrayList<Integer> yCoor = new ArrayList<Integer>(); 
 color[] colors = new color[50]; 
 ArrayList<Integer> bezierTypes = new ArrayList<Integer>(); 
-int i = 0; 
 boolean finished = true;
+boolean finished2 = true;
+boolean finished3 = true;
+boolean finished4 = true;
+boolean finished5 = true;
+boolean finished6 = true;
+boolean finished7 = true;
+boolean finished8 = true;
+boolean finished9 = true;
+boolean finished10 = true;
+boolean finished11 = true;
+boolean finished12 = true;
+int count1 = 0; 
+int count2 = 6; 
+int count3 = 12;
+int count4 = 18;
+int count5 = 24;
+int count6 = 30;
+int count7 = 36; 
+int count8 = 42; 
+int count9 = 48;
+int count10 = 54;
+int count11 = 60;
+int count12 = 66;
 int x = 0;
 int y = 0; 
 
@@ -44,12 +77,24 @@ void setup() {
   populateBrushStroke16();
   populateBrushStroke17();
   populateBrushStroke18();
-  populateBrushStroke19(); 
+  //populateBrushStroke19(); 
   
   
   test = new Renderer(brushStrokes.get(0));
+  test2 = new Renderer(brushStrokes.get(6)); 
+  test3 = new Renderer(brushStrokes.get(12));
+  test4 = new Renderer(brushStrokes.get(18)); 
+  test5 = new Renderer(brushStrokes.get(24));
+  test6 = new Renderer(brushStrokes.get(30)); 
+  test7 = new Renderer(brushStrokes.get(36));
+  test8 = new Renderer(brushStrokes.get(42)); 
+  test9 = new Renderer(brushStrokes.get(48));
+  test10 = new Renderer(brushStrokes.get(54)); 
+  test11 = new Renderer(brushStrokes.get(60));
+  test12 = new Renderer(brushStrokes.get(66)); 
     
 }
+ 
  
 
 void draw() {
@@ -57,14 +102,183 @@ void draw() {
   if(finished)
   { 
       finished = false;
-      test.setBrushStroke(brushStrokes.get(i));
-      if(i + 1 != brushStrokes.size())
+      test.setBrushStroke(brushStrokes.get(count1));
+      if(count1 + 1 < brushStrokes.size())
       {
-        i++;
+        if((count1 + 1) % 6 == 0)
+          count1 += 67; 
+        else
+          count1++;
       }
   }   
         
    finished = test.render();  
+   if(finished2)
+   { 
+      finished2 = false;
+      test2.setBrushStroke(brushStrokes.get(count2));
+      if(count2 + 1 < brushStrokes.size())
+      {
+        if(count2 + 1 % 6 == 0)
+          count2 += 67;
+        else
+         count2++;
+      }
+  }   
+        
+   finished2 = test2.render(); 
+   
+   if(finished3)
+   { 
+      finished3 = false;
+      test3.setBrushStroke(brushStrokes.get(count3));
+      if(count3 + 1 < brushStrokes.size())
+      {
+        if(count3 + 1 % 6 == 0)
+          count3 += 67;
+        else
+         count3++;
+      }
+  }   
+        
+   finished3 = test3.render(); 
+   
+   if(finished4)
+   { 
+      finished4 = false;
+      test4.setBrushStroke(brushStrokes.get(count4));
+      if(count4 + 1 < brushStrokes.size())
+      {
+        if(count4 + 1 % 6 == 0)
+          count4 += 67;
+        else
+         count4++;
+      }
+  }   
+        
+   finished4 = test4.render();
+  
+  if(finished5)
+   { 
+      finished5 = false;
+      test5.setBrushStroke(brushStrokes.get(count5));
+      if(count5 + 1 < brushStrokes.size())
+      {
+        if(count5 + 1 % 6 == 0)
+          count5 += 67;
+        else
+         count5++;
+      }
+  }   
+        
+   finished5 = test5.render(); 
+  
+   if(finished6)
+   { 
+      finished6 = false;
+      test6.setBrushStroke(brushStrokes.get(count6));
+      if(count6 + 1 < brushStrokes.size())
+      {
+        if(count6 + 1 % 6 == 0)
+          count6 += 67;
+        else
+         count6++;
+      }
+  }   
+        
+   finished6 = test6.render();  
+   
+     if(finished7)
+   { 
+      finished7 = false;
+      test7.setBrushStroke(brushStrokes.get(count7));
+      if(count7 + 1 < brushStrokes.size())
+      {
+        if(count7 + 1 % 6 == 0)
+          count7 += 67;
+        else
+         count7++;
+      }
+  }   
+        
+   finished7 = test7.render();
+   
+     if(finished8)
+   { 
+      finished8 = false;
+      test8.setBrushStroke(brushStrokes.get(count8));
+      if(count8 + 1 < brushStrokes.size())
+      {
+        if(count8 + 1 % 6 == 0)
+          count8 += 67;
+        else
+         count8++;
+      }
+  }   
+        
+   finished8 = test8.render();
+   
+     if(finished9)
+   { 
+      finished9 = false;
+      test9.setBrushStroke(brushStrokes.get(count9));
+      if(count9 + 1 < brushStrokes.size())
+      {
+        if(count9 + 1 % 6 == 0)
+          count9 += 67;
+        else
+         count9++;
+      }
+  }   
+        
+   finished9 = test9.render();
+   
+     if(finished10)
+   { 
+      finished10 = false;
+      test10.setBrushStroke(brushStrokes.get(count10));
+      if(count10 + 1 < brushStrokes.size())
+      {
+        if(count10 + 1 % 10 == 0)
+          count10 += 67;
+        else
+         count10++;
+      }
+  }   
+        
+   finished10 = test10.render();
+   
+     if(finished11)
+   { 
+      finished11 = false;
+      test11.setBrushStroke(brushStrokes.get(count11));
+      if(count11 + 1 < brushStrokes.size())
+      {
+        if(count11 + 1 % 6 == 0)
+          count11 += 67;
+        else
+         count11++;
+      }
+  }   
+        
+   finished11 = test11.render();
+   
+     if(finished12)
+   { 
+      finished12 = false;
+      test12.setBrushStroke(brushStrokes.get(count12));
+      if(count12 + 1 < brushStrokes.size())
+      {
+        if(count12 + 1 % 6 == 0)
+          count12 += 67;
+        else
+         count12++;
+      }
+  }   
+        
+   finished12 = test12.render();
+   
+   
    
 }
 
@@ -158,22 +372,22 @@ void populateBrushStroke1() {
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 8, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 8, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 8, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 7, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 7, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 7, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 100, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 100, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 100, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 100, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 100, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 100, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];

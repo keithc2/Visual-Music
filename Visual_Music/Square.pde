@@ -129,7 +129,7 @@ public class Renderer {
         } 
             
         line(startPointX, startPointY, startPointX + (float)(frameCount % framesToAnimate)/framesToAnimate*lineLengthX, startPointY + (float)(frameCount % framesToAnimate)/framesToAnimate*lineLengthY );
-        startTime += 0.5; 
+        //startTime += 0.005; 
         i++;     
         startPointX = endPointX; 
         startPointY = endPointY; 
