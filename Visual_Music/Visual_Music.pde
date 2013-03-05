@@ -101,7 +101,7 @@ void setup() {
  
 
 void draw() {
-  a1.play(); 
+  a1.play();
   if(finished)
   { 
       finished = false;
@@ -111,7 +111,7 @@ void draw() {
         println("finished 1 " + count1); 
         test.setBrushStroke(brushStrokes.get(count1));
         if((count1 + 1) % 6 == 0)
-          count1 += 67; 
+          count1 += 31; 
         else
           count1++;
       }
@@ -127,7 +127,7 @@ void draw() {
         
         test2.setBrushStroke(brushStrokes.get(count2));
         if((count2 + 1) % 6 == 0)
-          count2 += 67;
+          count2 += 31;
         else
          count2++;
       }
@@ -143,7 +143,7 @@ void draw() {
       {
         test3.setBrushStroke(brushStrokes.get(count3));
         if((count3 + 1) % 6 == 0)
-          count3 += 67;
+          count3 += 31;
         else
          count3++;
       }
@@ -159,7 +159,7 @@ void draw() {
       {
         test4.setBrushStroke(brushStrokes.get(count4));
         if((count4 + 1) % 6 == 0)
-          count4 += 67;
+          count4 += 31;
         else
          count4++;
       }
@@ -175,7 +175,7 @@ void draw() {
       {
         test5.setBrushStroke(brushStrokes.get(count5));
         if((count5 + 1) % 6 == 0)
-          count5 += 67;
+          count5 += 31;
         else
          count5++;
       }
@@ -191,111 +191,13 @@ void draw() {
       {
         test6.setBrushStroke(brushStrokes.get(count6));
         if((count6 + 1) % 6 == 0)
-          count6 += 67;
+          count6 += 31;
         else
          count6++;
       }
   }   
         
-   finished6 = test6.render();  
-   
-     if(finished7)
-   { 
-      finished7 = false;
-      
-      if(count7 + 1 < brushStrokes.size())
-      {
-        test7.setBrushStroke(brushStrokes.get(count7));
-        if((count7 + 1) % 6 == 0)
-          count7 += 67;
-        else
-         count7++;
-      }
-  }   
-        
-   finished7 = test7.render();
-   
-     if(finished8)
-   { 
-      finished8 = false;
-      
-      if(count8 + 1 < brushStrokes.size())
-      {
-        test8.setBrushStroke(brushStrokes.get(count8));
-        if((count8 + 1) % 6 == 0)
-          count8 += 67;
-        else
-         count8++;
-      }
-  }   
-        
-   finished8 = test8.render();
-   
-     if(finished9)
-   { 
-      finished9 = false;
-      
-      if(count9 + 1 < brushStrokes.size())
-      {
-        test9.setBrushStroke(brushStrokes.get(count9));
-        if((count9 + 1) % 6 == 0)
-          count9 += 67;
-        else
-         count9++;
-      }
-  }   
-        
-   finished9 = test9.render();
-   
-     if(finished10)
-   { 
-      finished10 = false;
-      
-      if(count10 + 1 < brushStrokes.size())
-      {
-        test10.setBrushStroke(brushStrokes.get(count10));
-        if((count10 + 1) % 10 == 0)
-          count10 += 67;
-        else
-         count10++;
-      }
-  }   
-        
-   finished10 = test10.render();
-   
-     if(finished11)
-   { 
-      finished11 = false;
-      
-      if(count11 + 1 < brushStrokes.size())
-      {
-        test11.setBrushStroke(brushStrokes.get(count11));
-        if((count11 + 1) % 6 == 0)
-          count11 += 67;
-        else
-         count11++;
-      }
-  }   
-        
-   finished11 = test11.render();
-   
-     if(finished12)
-   { 
-      finished12 = false;
-      
-      if(count12 + 1 < brushStrokes.size())
-      {
-        println("finished 12 " + count12 ); 
-        test12.setBrushStroke(brushStrokes.get(count12));
-        if((count12 + 1) % 6 == 0)
-          count12 += 67;
-        else
-         count12++;
-      }
-  }   
-        
-   finished12 = test12.render();
-   
+   finished6 = test6.render();
    
    
 }
@@ -305,18 +207,18 @@ void populateXAndY() {
   {
     for(int j = 0; j <= 550; j += 5)
     {
-      xCoor.add(i); 
-      yCoor.add(j); 
+      xCoor.add(i);
+      yCoor.add(j);
     }
-  } 
+  }
 }
 
 void getXAndY() {
   int elementX = int(random(xCoor.size()));
   x = xCoor.get(elementX);
-  xCoor.remove(elementX); 
-  int elementY = int(random(yCoor.size())); 
-  y = yCoor.get(elementY); 
+  xCoor.remove(elementX);
+  int elementY = int(random(yCoor.size()));
+  y = yCoor.get(elementY);
   yCoor.remove(elementY);
   
 }
@@ -442,118 +344,119 @@ void populateBrushStroke1() {
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 150, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 125, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 125, 3));
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 300, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 250, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 225, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 150, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 125, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 125, 3));
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 300, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 250, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 225, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 150, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 125, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 125, 3));
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 300, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 250, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 225, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 150, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 125, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 125, 3));
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 300, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 250, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 225, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 150, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 125, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 125, 3));
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 300, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 250, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 225, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 150, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 125, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 125, 3));
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 300, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 250, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 225, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 150, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 125, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 125, 3));
  
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
+ //20sec = 63.75 steps/sec
  
  //2
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -1022,87 +925,81 @@ void populateBrushStroke1() {
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ 
+ 
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
+ 
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  
  
- 
+ //mark 27 sec in
  //7
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
  brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
  getXAndY();
@@ -1118,95 +1015,105 @@ void populateBrushStroke1() {
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
  
- 
+ //mark 28.39
  //8
  getXAndY();
  c = colors[((int)random(colors.length))];
@@ -1432,7 +1339,7 @@ void populateBrushStroke1() {
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
- 
+ //mark 31 sec
  //10
  getXAndY();
  c = colors[((int)random(colors.length))];
@@ -1559,371 +1466,371 @@ void populateBrushStroke1() {
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
  
- 
+ //mark 32.42 sec
  //11
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  
  //12
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  
  //13
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 20, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 20, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 20, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 20, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 20, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 20, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 20, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 20, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 20, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 20, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 20, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 14, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 14, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 20, 3));
  
  
  //14
@@ -2169,7 +2076,7 @@ void populateBrushStroke1() {
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 50, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
- 
+ //mark 39.27
  //16
  getXAndY();
  c = colors[((int)random(colors.length))];
@@ -2541,132 +2448,127 @@ void populateBrushStroke1() {
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
  
- 
+ //mark 43.48
  //19
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
- 
- 
- 
- 
- 
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 12, 3));
  
  
  //20
@@ -2750,7 +2652,7 @@ void populateBrushStroke1() {
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 15, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 15, 3));
  
- 
+ //mark 46
  //21
  getXAndY();
  c = colors[((int)random(colors.length))];
@@ -3116,385 +3018,405 @@ void populateBrushStroke1() {
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
- 
+ //mark 48.82
  //24
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- 
- //25 Piano enters
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ /*
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ */
+ 
+ //mark 67.77
+ //25
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 30, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
-
+ //mark 86.7 sec
  //26
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
-getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 50, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ /*
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ */
+
+ //mark 105.64 sec
  //27
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  }
  
  void populateBrushStroke4() {
@@ -3502,112 +3424,112 @@ getXAndY();
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3)); 
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
 
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3)); 
-
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3)); 
+
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
 
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
+ 
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 40, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 30, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 20, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 12, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 25, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 50, 3));
  
  
  //28
@@ -3763,7 +3685,6 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
- 
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -3777,7 +3698,8 @@ getXAndY();
  }
  
  void populateBrushStroke6() { 
-    getXAndY();
+ 
+ getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
@@ -4553,7 +4475,8 @@ getXAndY();
  }
  
  void populateBrushStroke7() { 
-    getXAndY();
+ 
+ getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
@@ -5572,6 +5495,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //44
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -5693,6 +5618,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //45
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -5813,6 +5740,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
 
+
+ //46
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -5933,6 +5862,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
 
+
+ //47
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -6052,7 +5983,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //48
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -6096,7 +6029,8 @@ getXAndY();
  }
  
  void populateBrushStroke9() { 
-    getXAndY();
+ 
+ getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
@@ -6106,6 +6040,78 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ 
+ //49
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -6226,6 +6232,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //50
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -6346,6 +6354,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //51
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -6375,77 +6385,6 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
  
  getXAndY();
  c = colors[((int)random(colors.length))];
@@ -6537,7 +6476,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
 
-getXAndY();
+
+ //51
+ getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
@@ -6656,7 +6597,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //52
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -6776,7 +6719,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //53
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -6860,7 +6805,8 @@ getXAndY();
  }
  
  void populateBrushStroke10() { 
-    getXAndY();
+ 
+ getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
@@ -6870,6 +6816,38 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ 
+ //54
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -6990,6 +6968,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //55
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -7110,6 +7090,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //55
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -7179,37 +7161,6 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
  
  getXAndY();
  c = colors[((int)random(colors.length))];
@@ -7260,7 +7211,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //56
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -7380,7 +7333,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //57
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -7500,7 +7455,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //58
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -7624,16 +7581,8 @@ getXAndY();
  }
  
  void populateBrushStroke11() { 
-    getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ //59
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -7754,6 +7703,7 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ //60
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -7874,6 +7824,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //61
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -7974,6 +7926,16 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
  
  getXAndY();
  c = colors[((int)random(colors.length))];
@@ -7985,6 +7947,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //62
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -8104,7 +8068,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //63
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -8224,7 +8190,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //64
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -8344,7 +8312,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //65
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -8388,7 +8358,8 @@ getXAndY();
  }
  
  void populateBrushStroke12() { 
-    getXAndY();
+ 
+ getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
@@ -8398,6 +8369,78 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ 
+ //66
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -8518,6 +8561,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //67
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -8638,6 +8683,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //68
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -8667,77 +8714,6 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
  
  getXAndY();
  c = colors[((int)random(colors.length))];
@@ -8828,8 +8804,10 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
-getXAndY();
+ 
+ 
+ //69
+ getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
@@ -8948,7 +8926,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //70
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -9068,7 +9048,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //71
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -9152,7 +9134,8 @@ getXAndY();
  }
  
  void populateBrushStroke13() { 
-    getXAndY();
+ 
+ getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
@@ -9162,6 +9145,38 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ 
+ //72
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -9282,6 +9297,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //73
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -9402,6 +9419,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //74
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -9471,37 +9490,6 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
  
  getXAndY();
  c = colors[((int)random(colors.length))];
@@ -9552,57 +9540,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
-getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //75
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -9673,6 +9613,58 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ 
+ //76
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -9792,7 +9784,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //77
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -9916,236 +9910,8 @@ getXAndY();
  }
  
  void populateBrushStroke14() { 
-    getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
+ //78  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -10267,6 +10033,7 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
  
+ //79
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -10277,6 +10044,241 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ 
+ //80
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ 
+ //81
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -10396,7 +10398,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //82
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -10516,7 +10520,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //83
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -10636,7 +10642,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //84
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -10680,7 +10688,8 @@ getXAndY();
  }
  
  void populateBrushStroke15() { 
-    getXAndY();
+ 
+ getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
@@ -10690,6 +10699,78 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ 
+ //85
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -10810,6 +10891,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //86
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -10930,6 +11013,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //87
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -10959,77 +11044,6 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
  
  getXAndY();
  c = colors[((int)random(colors.length))];
@@ -11121,7 +11135,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
 
-getXAndY();
+
+ //88
+ getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
@@ -11240,7 +11256,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //89
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -11360,7 +11378,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //90
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -11444,7 +11464,8 @@ getXAndY();
  }
  
  void populateBrushStroke16() { 
-    getXAndY();
+ 
+ getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
@@ -11454,6 +11475,38 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ 
+ //91
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -11574,6 +11627,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //92
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -11694,36 +11749,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
+ //93
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -11844,7 +11871,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //94
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -11885,7 +11914,7 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
 
-getXAndY();
+ getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
@@ -11964,7 +11993,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //95
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -12084,7 +12115,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //96
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -12208,236 +12241,8 @@ getXAndY();
  }
  
  void populateBrushStroke17() { 
-    getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
+ //97  
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -12559,6 +12364,7 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
  
+ //98
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -12569,6 +12375,240 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ 
+ //99
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ 
+ //100
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -12688,7 +12728,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //101
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -12808,7 +12850,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //102
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -12908,7 +12952,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //103
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -12972,7 +13018,8 @@ getXAndY();
  }
 
  void populateBrushStroke18() { 
-    getXAndY();
+ 
+ getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
@@ -12982,6 +13029,57 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ getXAndY();
+ c = colors[((int)random(colors.length))];
+ b = bezierTypes.get((int)random(bezierTypes.size()));
+ brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
+ brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
+ 
+ //104
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -13102,6 +13200,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //105
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -13222,56 +13322,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
- getXAndY();
- c = colors[((int)random(colors.length))];
- b = bezierTypes.get((int)random(bezierTypes.size()));
- brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 2, y + 1, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 4, y + 2, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
- brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
- 
+ //106
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -13392,7 +13444,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //107
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -13413,7 +13467,7 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
 
-getXAndY();
+ getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
  brushStrokes.add(new BrushStroke(x, y, c, c, b, 10, 3));
@@ -13513,6 +13567,8 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
  
+ 
+ //108
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -13632,7 +13688,9 @@ getXAndY();
  brushStrokes.add(new BrushStroke(x + 6, y + 3, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 8, y + 4, c, c, b, 10, 3));
  brushStrokes.add(new BrushStroke(x + 10, y + 5, c, c, b, 10, 3));
-
+ 
+ 
+ //109
  getXAndY();
  c = colors[((int)random(colors.length))];
  b = bezierTypes.get((int)random(bezierTypes.size()));
@@ -13806,12 +13864,7 @@ getXAndY();
    brushStrokes.add(new BrushStroke(65, 482, color(232, 202, 98), color(232, 202, 98), 14, 150, 3));
    brushStrokes.add(new BrushStroke(65, 499, color(232, 202, 98), color(232, 202, 98), 14, 150, 1));
    
-   
-   
-   
-  
  } 
-
 
 void stop() {
    a1.close(); 
@@ -13819,4 +13872,4 @@ void stop() {
    super.stop() ;
 }
 
-
+//20 + (((15*6)*14)/64) etc... = number of seconds past at that point
