@@ -101,21 +101,13 @@ public class Renderer {
       endPointX = bezierPoint(startX, startX + 50 , startX + 100, startX + 150, t); 
       endPointY = bezierPoint(startY, startY, startY, startY, t);
     } 
-    else if (brushStroke.bezierType == 9) //short line brush strokes  
+    else if (brushStroke.bezierType == 15) //other type of stroke  
     { 
-      endPointX = bezierPoint(startX, startX - 4 , startX - 7, startX - 10, t); 
-      endPointY = bezierPoint(startY, startY + 1, startY + 2, startY + 4, t);
+       endPointX = bezierPoint(startX, startX - 10, startX - 10, startX - 20, t);
+      endPointY = bezierPoint(startY,  startY + 15, startY + 10, startY + 20, t);
+    
     } 
-    else if (brushStroke.bezierType == 10) //lamp strokes 
-    { 
-      endPointX = bezierPoint(startX, startX - 4 , startX - 7, startX - 10, t); 
-      endPointY = bezierPoint(startY, startY + 1, startY + 2, startY + 4, t);
-    } 
-    else if (brushStroke.bezierType == 11) //vertical lines for lamp post  
-    { 
-      endPointX = bezierPoint(startX, startX - 4 , startX - 7, startX - 10, t); 
-      endPointY = bezierPoint(startY, startY + 1, startY + 2, startY + 4, t);
-    } 
+    
     
     float lineLengthX = endPointX - startPointX;
     float lineLengthY = endPointY - startPointY;
